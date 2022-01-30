@@ -10,6 +10,9 @@ h1 {
   margin: 0;
 }
 
+p {
+  text-align: center;
+}
 ul {
   margin: 0 0 10px;
   padding: 0;
@@ -23,7 +26,6 @@ li {
   line-height: 1;
   list-style: none;
 }
-
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
@@ -53,4 +55,5 @@ li {
 .search-form {
   margin-bottom: 20px;
 }
+
 
