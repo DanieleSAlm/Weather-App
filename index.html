@@ -47,7 +47,10 @@
         </div>
         </form>
         <h1 id="city">
-          Dublin, Ireland
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
         </h1>
         <ul>
           <li id="date">
@@ -59,11 +62,13 @@
         </ul>
         <div class="row">
           <div class="col-6">
-            <div class="clearfix">
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Clear" id="icon" class="float-left" />
               <div class="float-left">
-                <span class="temperature" id="temperature">19</span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a>
+                <span class="temperature" id="temperature">0</span>
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
                 </span>
               </div>
             </div>
