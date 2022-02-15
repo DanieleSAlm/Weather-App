@@ -126,7 +126,7 @@ function displayForecast(response) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   var cTemp = celsiusConverted;
-  var cToFahr = cTemp * 9 / 5 + 32;
+  var cToFahr =  Math.round(cTemp * 9 / 5 + 32);
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = cToFahr;
