@@ -83,7 +83,19 @@ function searchLocation(position) {
 
 function getCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchLocation);
+  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+}
+
+function searchCurrentLocation(position) {
+  let lat = position.coords.latitude;
+  let lng = position.coords.longitude;
+  let apiKey = "26445b0f8559f89be3778dc24dbf4fab";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(currentLocationResponse);
+}
+
+function currentLocationResponse(response){
+  searchCity(response.data.name);
 }
 
 function displayForecast(response) {
